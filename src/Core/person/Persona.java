@@ -2,19 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Main;
+package Core.person;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author apmarian
+ * @author maria
  */
-public class Editorial {
-    private String nit; 
-    private String nombre;
-    Gerente gerente = new Gerente();
-    private ArrayList<Libro> libros;
-    private ArrayList<Stand> Stands; 
+public abstract class Persona {
+    protected String nombre; 
+    protected int cedula; 
     
+    public Persona(String nombre, int cedula){
+        this.nombre= nombre; 
+        this.cedula= cedula;
+    }
+        
 }

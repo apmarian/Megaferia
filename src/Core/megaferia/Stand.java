@@ -21,12 +21,10 @@ public class Stand {
     public Stand(float precio) {
         this.id = Stand.idCount;// accediendo a la variable en la clase stand
         this.precio = precio;
-        this.editoriales = editoriales;
-        
+        this.editoriales = new ArrayList<>();
+
         Stand.idCount++; // va incrementando 
     }
-
-
 
     @Override
     public String toString() {
@@ -38,6 +36,10 @@ public class Stand {
         return id;
     }
 
+    public ArrayList<Editorial> getEditoriales() {
+        return editoriales;
+    }
+
     public boolean addEditorial(Editorial editorial) {
         if (!this.editoriales.contains(editorial)) {
             this.editoriales.add(editorial);
@@ -45,5 +47,5 @@ public class Stand {
         }
         return false;
     }
-    
+
 }

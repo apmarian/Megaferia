@@ -16,18 +16,36 @@ public class Editorial {
 
     private String nit;
     private String nombre;
+    private String direccion; 
     private Gerente gerente;
     private ArrayList<Libro> libros;
     private ArrayList<Stand> stands;
 
-    public Editorial(String nit, String nombre, Gerente gerente, ArrayList<Libro> libros, ArrayList<Stand> stands) {
+    public Editorial(String nit, String nombre,String direccion,Gerente gerente) {
         this.nit = nit;
         this.nombre = nombre;
+        this.direccion = direccion; 
         this.gerente = gerente;
-        this.libros = libros;
-        this.stands = stands;
+        this.libros = new ArrayList<>();
+        this.stands = new ArrayList<>();
+        this.gerente.setEditorial(this);
     }
 
+    
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "(" + this.nit + ", " + this.nombre + ')';
+    }
+
+    public Gerente getGerente() {
+        return gerente;
+    }
+
+    public ArrayList<Stand> getStands() {
+        return stands;
+    }
+    
+    
     public boolean addLibro(Libro libro) {
         if (!this.libros.contains(libro)) {
             this.libros.add(libro);

@@ -18,5 +18,11 @@ public abstract class Persona {
         this.nombre= nombre; 
         this.cedula= cedula;
     }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "(" + this.nombre + ","+ this.cedula + ")";
+    }
+    
         
 }

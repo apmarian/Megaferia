@@ -19,5 +19,12 @@ public class Gerente extends Persona {
         this.editorial = null;
     }
 
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
+    }
    
 }
